@@ -316,9 +316,65 @@ function abbrevName(name){
   name = name.toUpperCase()
   n = name.split(" ")
   return n[0][0] + "." + n[1][0]
+}
 
-    // code away
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+// invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+// invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+// invert([]) == []
 
+function invert(array) {
+  var newArr = [];
+  for(var i = 0; i < array.length; i++){
+    newArr.push(-array[i]);
+  }
+   return newArr;
+}
+
+
+
+function doubleInteger(i){
+  i +=i
+  return i
+}
+
+let arr = 26
+
+console.log(doubleInteger(arr));
+
+// It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+// Return the average of the given array rounded down to its nearest integer.
+// The array will never be empty.
+
+function getAverage(marks){
+  total = 0
+  for (i = 0; i < marks.length; i++){
+    total += marks[i]
+  }
+  return Math.floor(total / marks.length);
+}
+
+//Return the number (count) of vowels in the given string.
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+// The input string will only consist of lower case letters and/or spaces.
+function getCount(str) {
+  var vowelsCount = 0;
+  for (i = 0; i < str.length; i++){
+    if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u'){
+      vowelsCount +=1
+    }
+  }
+  return vowelsCount ;
+}
+
+// Trolls are attacking your comment section!
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+// Note: for this kata y isn't considered a vowel.
+
+function disemvowel(str) {
+  return str;
 }
 
 
